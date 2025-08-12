@@ -15,4 +15,11 @@ def calculate_discount(price, discount_percent):
 price = float(input('Enter the original price of the item (example 1000): '))
 discount_percent = float(input('Enter discount (example 20 for 20%): ')) / 100 # divides discount by 100 
 
+
 # Print the final price after applying the discount, or if no discount was applied, print the original price.
+
+if discount_percent >= 0.20:
+    #print(f'Discount applied: ${price * discount_percent:.2f}') # currency display in 2 decimal places
+    print(f'Final price (after discount): ${calculate_discount(price, discount_percent):.2f}')
+else:
+    print(f'Original price (no discount): ${price:.2f}')
